@@ -34,8 +34,14 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="scss" scoped>
 @import "../assets/scss/style.scss";
+
+    .container {
+        align-items: center;
+    }
+
     .logo {
         flex-grow: 4;
+
         img {
             width: 60px;
         }
@@ -46,11 +52,13 @@ export default {
         height: 100%;
         display: flex;
         justify-content: center;
+
         li {
             display: flex;
             align-items: center;
             text-transform: uppercase;
             margin: 0 1em 0 1em;
+
             a {
                 text-decoration: none;
                 display: inline-block;
@@ -59,10 +67,10 @@ export default {
                 line-height: 100px;
                 color: black;
                 border-bottom: 0.4em solid transparent;
-                &.active,
-                &:hover {
-                    color: $bluehover;
-                    border-bottom: 0.4em solid $bluehover;
+
+                &.active, &:hover {
+                    color: $lightblue;
+                    border-bottom: 0.4em solid $lightblue;
                 }
             }
             

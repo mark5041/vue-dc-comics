@@ -46,6 +46,10 @@ export default {
                     image: require("../assets/img/buy-comics-subscriptions.png"),
                     desciption: "comics subscriptions",
                 },
+                {
+                    image: require("../assets/img/buy-dc-power-visa.svg"),
+                    desciption: "DC POWER VISA",
+                },
             ]
         }
     },
@@ -61,8 +65,10 @@ export default {
 
     .content-section {
         background-color: black;
+        
         .container {
             align-items: center;
+
             h1 {
                 color: white;
                 padding: 1.5em 0;
@@ -71,15 +77,18 @@ export default {
     }
 
     .product-section {
-        background-color: blue;
-        border-bottom: 1em solid yellow;
+        background-color: $lightblue;
+
         .container {
             justify-content: space-between;
             color: white;
             padding: 50px;
+
             .item {
                 display: flex;
                 align-items: center;
+                flex-grow: 1;
+
                 img {
                     max-width: 60px;
                     max-height: 60px;
