@@ -14,13 +14,7 @@
             </div>
         </div>
     </main>
-</template>
-
-
-
-                
-                
-                
+</template>          
 
 
 <script>
@@ -53,8 +47,9 @@ export default {
             ]
         }
     },
-    created() {
-        console.log(this.products[1].image);
+    created() 
+    {
+
     }
 };
 </script>
@@ -65,7 +60,7 @@ export default {
 
     .content-section {
         background-color: black;
-        
+        border-bottom: 15px solid red;
         .container {
             align-items: center;
 
