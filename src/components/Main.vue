@@ -7,10 +7,11 @@
         </div>
         <div class="product-section">
             <div class="container">
-                <div v-for="(element, index) in products" :key ="index" class="item">
-                    <img :src="`${element.image}`" alt="">
-                    <span>{{element.desciption}}</span>
-                </div>
+                <ProductCard v-for="(element, index) in products" :key ="index" class="item" 
+                :img="element.image"
+                :alt="element.desciption"
+                :titolo="element.desciption"
+                />
             </div>
         </div>
     </main>
@@ -18,27 +19,31 @@
 
 
 <script>
+import ProductCard from './ProductCard.vue'
 export default {
-  name: 'Header',
+  name: 'Main',
+  components: {
+    ProductCard,
+  },
     data(){
         return {
             title: "Lorem Ipsum",
             products: [
                 {
                     image: require("../assets/img/buy-comics-digital-comics.png"),
-                    desciption: "comics digital",
+                    desciption: "COMICS DIGITAL",
                 },
                 {
                     image: require("../assets/img/buy-comics-merchandise.png"),
-                    desciption: "comics merchandise",
+                    desciption: "COMICS MERCHANDISE",
                 },
                 {
                     image: require("../assets/img/buy-comics-shop-locator.png"),
-                    desciption: "comics shop locator",
+                    desciption: "COMIC SHOP LOCATOR",
                 },
                 {
                     image: require("../assets/img/buy-comics-subscriptions.png"),
-                    desciption: "comics subscriptions",
+                    desciption: "COMICS SUBSCRIPTION",
                 },
                 {
                     image: require("../assets/img/buy-dc-power-visa.svg"),
@@ -79,17 +84,7 @@ export default {
             color: white;
             padding: 50px;
 
-            .item {
-                display: flex;
-                align-items: center;
-                flex-grow: 1;
-
-                img {
-                    max-width: 60px;
-                    max-height: 60px;
-                    margin-right: 0.5em;
-                }
-            }
+            
         }
     }
 
