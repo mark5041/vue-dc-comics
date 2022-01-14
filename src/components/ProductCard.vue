@@ -7,7 +7,7 @@
 
 <script>
 export default {  
-    name: "Product",
+    name: "ProductCard",
     props: {
         img: {
             type: String,
@@ -38,6 +38,10 @@ export default {
             max-width: 60px;
             max-height: 60px;
             margin-right: 0.5em;
+        }
+
+        span {
+            text-transform: uppercase;
         }
     }
 </style>
