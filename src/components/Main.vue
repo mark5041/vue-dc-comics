@@ -60,7 +60,7 @@ export default {
 
     .content-section {
         background-color: black;
-        border-bottom: 15px solid red;
+        border-bottom: 15px solid red; 
         .container {
             align-items: center;
 
